@@ -1,0 +1,14 @@
+# Idea files
+.idea/
+
+# Переменные окружения
+.env
+
+# зависимости
+node_modules/
+
+# testing
+/coverage
+
+# production
+/build
