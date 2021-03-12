@@ -7,6 +7,7 @@ require('dotenv').config();                 //  Чтобы получить да
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+const userRoutes = require('./api/routes/users');
 
 mongoose.connect(
     "mongodb+srv://user:" + process.env.MONGO_PASS + "@cluster0.tefog.mongodb.net/academindRestApi",
@@ -35,6 +36,7 @@ app.use((req, res, next) => {
 // роуты, которые должны обрабатывать запросы
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
+app.use('/user', userRoutes);
 
 app.use((req, res, next) => {
     const error = new Error('Не найдено');
